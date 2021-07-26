@@ -1,0 +1,15 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+.search-text {
+    width: 200px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+}
+.submit-btn {
+    padding: 15px;
+    margin: 0px 5px;
+}

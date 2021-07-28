@@ -24,9 +24,7 @@ const Result = ({results}) => {
         )
     
     }else{
-        return (
-            <div></div>
-        )
+        return null
     }
 }
 

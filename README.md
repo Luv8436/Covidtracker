@@ -4,7 +4,7 @@
 
 # What it does ?
 
-    It show the covid statistics for a particular country as we enter it.<br/>
+    It show the covid statistics for a particular country as we enter it.
     Covid Data like - Population , Deaths , Recovered , Active Cases , Tests , Total Cases
 
 # How it does this ?

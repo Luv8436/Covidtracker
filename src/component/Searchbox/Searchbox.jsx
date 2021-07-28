@@ -8,8 +8,8 @@ const Searchbox = (props) => {
             <form onSubmit={function(event){getDetail(event , props.getCovidData)}} action="">
                 <input onChange={(event) => props.onInputChange(event.target.value)} 
                 className="search-text" type="text" 
-                placeholder="Enter country Name" />
-                <input className="submit-btn" type="submit" />
+                placeholder="Enter country Name" required />
+                <input className="submit-btn" type="submit" value="Search" />
             </form>
         </div>
     )

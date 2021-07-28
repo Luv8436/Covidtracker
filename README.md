@@ -9,7 +9,7 @@
 
 # How it does this ?
 
-    It interacts with covid19 api with the backend every time we enter the country name and search it and nicely display the data on the ui.
+It interacts with covid19 api with the backend every time we enter the country name and search it and nicely display the data on the ui.
 
 # What it looks ?
 

@@ -17,11 +17,13 @@ const Searchbox = (props) => {
 const getDetail = (event , getCovidData) => {
     let country = event.target[0].value;
     event.preventDefault();
-    fetch(`https://covid-19-v1.p.rapidapi.com/v1/countries?sortby=Cases&country=${country}`, {
+
+    
+    fetch(`https://covid-193.p.rapidapi.com/statistics?country=${country}`, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "b3b45b8423msh6360b2994d663b4p1c7b49jsn3ff44b7de71c",
-            "x-rapidapi-host": "covid-19-v1.p.rapidapi.com"
+            'X-RapidAPI-Key': 'b3b45b8423msh6360b2994d663b4p1c7b49jsn3ff44b7de71c',
+            'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
         }
     })
     .then(response => {

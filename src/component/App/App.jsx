@@ -11,6 +11,7 @@ class App extends React.Component{
         this.state={
             isLogoExpanded : true,
             data : {},
+            isFetching : true,
         }
     }
     handleInputChange = (text) => {
@@ -20,14 +21,25 @@ class App extends React.Component{
         if(text.length===0){
             this.setState({
                 data : {},
+                isFetching : true,
             })
         }
     }
 
     setData = (covidData) => {
         console.log(covidData)
+
+        if(covidData['response'].length===0){
+            this.setState({
+                data : [],
+                isFetching : true,
+            })
+
+            return;
+        }
         this.setState({
             data : covidData,
+            isFetching : false,
         })
     }
 
@@ -36,7 +48,7 @@ class App extends React.Component{
             <div className="app-container" >
                 <Header isLogoExpanded={this.state.isLogoExpanded} />
                 <Searchbox getCovidData={this.setData} onInputChange={this.handleInputChange} />
-                <Result results={this.state.data} />
+                <Result results={this.state.data} isFetching={this.state.isFetching}/>
             </div>
         )
     }
